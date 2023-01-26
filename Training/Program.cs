@@ -4,7 +4,27 @@
     {
         static void Main(string[] args)
         {
+
+        }
+
+        public static int SumTwoSmallestNumbers(int[] numbers)
+        {
+            return numbers.OrderBy(i => i).Take(2).Sum();
+        }
+
+        public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+        {
+            List<int> result = new List<int>();
             
+            foreach (var item in listOfItems)
+            {
+                if (item is int)
+                {
+                    result.Add((int)item);
+                }
+            }
+
+            return result;
         }
 
         public static string GetMiddle(string s)
