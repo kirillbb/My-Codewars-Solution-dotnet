@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
+            
+        }
 
+        //getMiddle("test") should return "es"
+        //getMiddle("testing") should return "t"
+        public static string GetMiddle(string s)
+        {
+            return s.Length % 2 != 0 ? s[s.Length / 2].ToString() : s[s.Length / 2 - 1].ToString() + s[s.Length / 2].ToString();
         }
 
         //FindAverage(new double[] { 17, 16, 16, 16, 16, 15, 17, 17, 15, 5, 17, 17, 16 });
