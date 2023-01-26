@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            
+
+        }
+
+        public static int SumTwoSmallestNumbers(int[] numbers)
+        {
+            return numbers.OrderBy(i => i).Take(2).Sum();
         }
 
         public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
