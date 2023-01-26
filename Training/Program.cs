@@ -4,12 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var list = GetIntegersFromList(new List<object>() { 1, "a", "b", 0, 15 });
-
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
+            
         }
 
         public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
