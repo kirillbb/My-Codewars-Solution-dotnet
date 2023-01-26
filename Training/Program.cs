@@ -4,7 +4,27 @@
     {
         static void Main(string[] args)
         {
+            var list = GetIntegersFromList(new List<object>() { 1, "a", "b", 0, 15 });
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+        {
+            List<int> result = new List<int>();
             
+            foreach (var item in listOfItems)
+            {
+                if (item is int)
+                {
+                    result.Add((int)item);
+                }
+            }
+
+            return result;
         }
 
         public static string GetMiddle(string s)
