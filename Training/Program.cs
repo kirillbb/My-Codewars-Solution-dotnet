@@ -9,7 +9,10 @@
 
         public static int SumTwoSmallestNumbers(int[] numbers)
         {
-            return numbers.OrderBy(i => i).Take(2).Sum();
+            return numbers
+                .OrderBy(i => i)
+                .Take(2)
+                .Sum();
         }
 
         public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
@@ -29,7 +32,9 @@
 
         public static string GetMiddle(string s)
         {
-            return s.Length % 2 != 0 ? s[s.Length / 2].ToString() : s[s.Length / 2 - 1].ToString() + s[s.Length / 2].ToString();
+            return s.Length % 2 != 0 
+                ? s[s.Length / 2].ToString() 
+                : s[s.Length / 2 - 1].ToString() + s[s.Length / 2].ToString();
         }
 
         public static double FindAverage(double[] array)
