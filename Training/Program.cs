@@ -2,9 +2,15 @@
 {
     public static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 
+        }
+
+        public static int DescendingOrder(int num)
+        {
+            return int.Parse(string.Concat(num.ToString()
+                .OrderByDescending(x => x)));
         }
 
         public static int SumTwoSmallestNumbers(int[] numbers)
@@ -18,7 +24,7 @@
         public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
         {
             List<int> result = new List<int>();
-            
+
             foreach (var item in listOfItems)
             {
                 if (item is int)
@@ -32,8 +38,8 @@
 
         public static string GetMiddle(string s)
         {
-            return s.Length % 2 != 0 
-                ? s[s.Length / 2].ToString() 
+            return s.Length % 2 != 0
+                ? s[s.Length / 2].ToString()
                 : s[s.Length / 2 - 1].ToString() + s[s.Length / 2].ToString();
         }
 
@@ -43,11 +49,11 @@
             if (array.Length != 0)
             {
                 foreach (var item in array)
-                    result+= item;
+                    result += item;
 
                 return result / array.Length;
             }
-            
+
             return result;
         }
 
