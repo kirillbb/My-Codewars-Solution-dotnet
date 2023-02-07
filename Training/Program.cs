@@ -9,27 +9,7 @@
 
         public static string MakeComplement(string dna)
         {
-            string result = "";
-            foreach (var ch in dna)
-            {
-                switch (ch)
-                {
-                    case 'A':
-                        result += 'T';
-                        break;
-                    case 'T':
-                        result += 'A';
-                        break;
-                    case 'C':
-                        result += 'G';
-                        break;
-                    case 'G':
-                        result += 'C';
-                        break;
-                }
-            }
-
-            return result;
+            return dna.Replace('A', 't').Replace('C', 'g').Replace('T', 'a').Replace('G', 'c').ToUpper();
         }
 
         private static string ToCamelCase(string str)
