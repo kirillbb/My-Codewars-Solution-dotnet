@@ -4,7 +4,32 @@
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine(ToCamelCase("hello"));
+
+        }
+
+        public static string MakeComplement(string dna)
+        {
+            string result = "";
+            foreach (var ch in dna)
+            {
+                switch (ch)
+                {
+                    case 'A':
+                        result += 'T';
+                        break;
+                    case 'T':
+                        result += 'A';
+                        break;
+                    case 'C':
+                        result += 'G';
+                        break;
+                    case 'G':
+                        result += 'C';
+                        break;
+                }
+            }
+
+            return result;
         }
 
         private static string ToCamelCase(string str)
