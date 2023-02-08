@@ -58,6 +58,37 @@ namespace Training.Tests
             Assert.Equal(5, Kata.SumTwoSmallestNumbers(numbers3));
         }
 
+        [Fact]
+        public void DescendingOrderTest0()
+        {
+            Assert.Equal(0, Kata.DescendingOrder(0));
+        }
+
+        [Fact]
+        public void DescendingOrderTest1()
+        {
+            Assert.Equal(1, Kata.DescendingOrder(1));
+        }
+
+        [Fact]
+        public void DescendingOrderTest15()
+        {
+            Assert.Equal(51, Kata.DescendingOrder(15));
+        }
+
+        [Fact]
+        public void DescendingOrderTest1021()
+        {
+            Assert.Equal(2110, Kata.DescendingOrder(1021));
+        }
+
+        [Fact]
+        public void ToCamelCaseTest()
+        {
+            Assert.Equal("helloTests", Kata.ToCamelCase("hello-Tests"));
+            Assert.Equal("HelloTests", Kata.ToCamelCase("Hello_tests"));
+        }
+
         private static Random rnd = new Random();
 
         private static int[] solution(int[] arr) => arr.Where(v => v != 0).Concat(arr.Where(v => v == 0)).ToArray();

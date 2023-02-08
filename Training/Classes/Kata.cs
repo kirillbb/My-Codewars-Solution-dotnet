@@ -14,6 +14,7 @@
                 ? s[s.Length / 2].ToString()
                 : s[s.Length / 2 - 1].ToString() + s[s.Length / 2].ToString();
         }
+
         public static string ToCamelCase(string str)
         {
             return string.Concat(str.Split('-', '_').Select((s, i) => i > 0 ? char.ToUpper(s[0]) + s.Substring(1) : s));
