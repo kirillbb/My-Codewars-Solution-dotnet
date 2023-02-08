@@ -26,6 +26,15 @@ namespace Training.Tests
                 Assert.Equal(expected, actual);
             }
         }
+        
+        [Fact]
+        public void GetMiddleTest()
+        {
+            Assert.Equal("es", Kata.GetMiddle("test"));
+            Assert.Equal("t", Kata.GetMiddle("testing"));
+            Assert.Equal("dd", Kata.GetMiddle("middle"));
+            Assert.Equal("A", Kata.GetMiddle("A"));
+        }
 
         private static Random rnd = new Random();
 
