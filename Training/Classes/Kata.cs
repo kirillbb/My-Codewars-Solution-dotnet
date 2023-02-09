@@ -1,7 +1,15 @@
-﻿namespace Training.Classes
+﻿using System.Text.RegularExpressions;
+
+namespace Training.Classes
 {
     public class Kata
     {
+        public static bool ValidatePin(string pin)
+        {
+            string result = Regex.Match(pin, @"\d+").Value;
+            return pin == result && (result.Length == 4 || result.Length == 6);
+        }
+
         public static int DescendingOrder(int num)
         {
             return int.Parse(string.Concat(num.ToString()

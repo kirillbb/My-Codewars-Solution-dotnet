@@ -6,6 +6,41 @@ namespace Training.Tests
     public class KataTests
     {
         [Fact]
+        public void ValidatePinLengthTest()
+        {
+            Assert.False(Kata.ValidatePin("1"));
+            Assert.False(Kata.ValidatePin("12"));
+            Assert.False(Kata.ValidatePin("123"));
+            Assert.False(Kata.ValidatePin("12345"));
+            Assert.False(Kata.ValidatePin("1234567"));
+            Assert.False(Kata.ValidatePin("-1234"));
+            Assert.False(Kata.ValidatePin("-12345"));
+            Assert.False(Kata.ValidatePin("1.234"));
+            Assert.False(Kata.ValidatePin("-1.234"));
+            Assert.False(Kata.ValidatePin("00000000"));
+        }
+
+        [Fact]
+        public void ValidatePinNonDigitTest()
+        {
+            Assert.False(Kata.ValidatePin("a234"));
+            Assert.False(Kata.ValidatePin(".234"));
+        }
+
+        [Fact]
+        public void ValidatePinValidTest()
+        {
+            Assert.True(Kata.ValidatePin("0000"));
+            Assert.True(Kata.ValidatePin("1234"));
+            Assert.True(Kata.ValidatePin("1111"));
+            Assert.True(Kata.ValidatePin("123456"));
+            Assert.True(Kata.ValidatePin("098765"));
+            Assert.True(Kata.ValidatePin("000000"));
+            Assert.True(Kata.ValidatePin("090909"));
+        }
+
+
+        [Fact]
         public void MoveZeroesSampleTest()
         {
             Assert.Equal(new int[] { 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 }, Kata.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
