@@ -1,10 +1,17 @@
-﻿namespace Training
+﻿using Training.Classes;
+
+namespace Training
 {
-    public static partial class Program
+    public static class Program
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            
+            var tower = TowerBuilder.Build(6);
+
+            for (int i = 0; i < tower.Length; i++)
+            {
+                Console.WriteLine("[" + tower[i] + "]");
+            }
         }
     }
 }
