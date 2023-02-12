@@ -4,6 +4,25 @@ namespace Training.Classes
 {
     public class Kata
     {
+        public static string ToWeirdCase(string input)
+        {
+            string result = "";
+            string[] words = input.Split(' ');
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                char[] symbols = words[i].ToCharArray();
+                for (int n = 0; n < symbols.Length; n++)
+                {
+                    result += n % 2 == 0 ? char.ToUpper(symbols[n]) : char.ToLower(symbols[n]);
+                }
+                
+                result += i != words.Length - 1 ? " " : "";
+            }
+
+            return result;
+        }
+
         public static bool ValidatePin(string pin)
         {
             string result = Regex.Match(pin, @"\d+").Value;

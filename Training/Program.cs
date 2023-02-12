@@ -6,7 +6,7 @@ namespace Training
     {
         public static void Main(string[] args)
         {
-            
+            Console.WriteLine(Kata.ToWeirdCase("hello my name is kirill!"));
         }
     }
 }
