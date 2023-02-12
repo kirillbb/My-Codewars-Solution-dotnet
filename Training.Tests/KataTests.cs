@@ -6,6 +6,15 @@ namespace Training.Tests
     public class KataTests
     {
         [Fact]
+        public void ToWeirdCaseTests()
+        {
+            Assert.Equal("Oh", Kata.ToWeirdCase("oh"));
+            Assert.Equal("BoY", Kata.ToWeirdCase("BOY"));
+            Assert.Equal("ThIs Is A TeSt", Kata.ToWeirdCase("This is a test"));
+            Assert.Equal("OnCe, WhEn I WaS YoUnG, I CoDeD On ThE AmIgA!", Kata.ToWeirdCase("Once, when I was young, I coded on the Amiga!"));
+        }
+
+        [Fact]
         public void ValidatePinLengthTest()
         {
             Assert.False(Kata.ValidatePin("1"));
