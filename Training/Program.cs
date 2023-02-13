@@ -1,12 +1,10 @@
-﻿using Training.Classes;
-
-namespace Training
+﻿namespace Training
 {
     public static class Program
     {
         public static void Main(string[] args)
         {
-            
+
         }
     }
 }
