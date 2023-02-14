@@ -1,4 +1,6 @@
-﻿namespace Training.Interfaces
+﻿using Training.Classes;
+
+namespace Training.Interfaces
 {
     internal interface ITrafficLight
     {
