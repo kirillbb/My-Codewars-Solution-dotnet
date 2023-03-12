@@ -7,7 +7,7 @@ namespace Training
     {
         public static void Main(string[] args)
         {
-            
+            EventTraining();
         }
 
         public static void EventTraining()
@@ -16,10 +16,15 @@ namespace Training
             Handler1 handler1 = new Handler1();
             Handler2 handler2 = new Handler2();
 
+            // subscription
             counter.OnCount += handler1.Message;
             counter.OnCount += handler2.Message;
 
             counter.Count();
+
+            // unsubscribe is required
+            counter.OnCount -= handler1.Message;
+            counter.OnCount -= handler2.Message;
         }
 
         public static void DelegateTraining()
