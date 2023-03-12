@@ -13,11 +13,11 @@ namespace Training
         public static void EventTraining()
         {
             Counter counter = new Counter();
-            Handler_1 handler_1 = new Handler_1();
-            Handler_2 handler_2 = new Handler_2();
+            Handler1 handler1 = new Handler1();
+            Handler2 handler2 = new Handler2();
 
-            counter.onCount += handler_1.Message;
-            counter.onCount += handler_2.Message;
+            counter.OnCount += handler1.Message;
+            counter.OnCount += handler2.Message;
 
             counter.Count();
         }

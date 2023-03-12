@@ -1,6 +1,6 @@
 ﻿namespace Training.Classes.EventTraining
 {
-    public class Handler_2
+    public class Handler2
     {
         public void Message()
         {
