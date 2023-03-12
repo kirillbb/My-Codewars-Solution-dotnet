@@ -1,6 +1,10 @@
 ﻿namespace Training.Classes.EventTraining
 {
-    internal class Handler_2
+    public class Handler_2
     {
+        public void Message()
+        {
+            Console.WriteLine("That's right, already 71!");
+        }
     }
 }
