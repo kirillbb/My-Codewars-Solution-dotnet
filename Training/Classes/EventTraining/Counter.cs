@@ -4,16 +4,16 @@
     {
         public delegate void MethodContainer();
 
-        public event MethodContainer onCount;
+        public event MethodContainer OnCount;
 
         public void Count()
         {
             for (int i = 0; i < 100; i++)
             {
                 Console.WriteLine(i);
-                if (i == 71 && onCount != null)
+                if (i == 71 && OnCount != null)
                 {
-                    onCount.Invoke();
+                    OnCount.Invoke();
                 }
             }
         }
